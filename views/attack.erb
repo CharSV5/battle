@@ -1,2 +1,3 @@
-<%= @game.player1.name %> attacked <%= @game.player2.name %><br>
-<%= @game.player2.name %> HP = <%= @game.player2.hit_points %>
+<%= @game.turn.name %> attacked <%= @game.opponent_of(@game.turn).name %><br>
+<%= @game.opponent_of(@game.turn).name %> HP = <%= @game.opponent_of(@game.turn).hit_points %>
+<a href="/switch">OK</a>
