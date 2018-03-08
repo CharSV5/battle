@@ -18,15 +18,18 @@ class Game
   end
 
   def switch_turn
-    @turn = opponent_of(@turn)
+    @turn = opponent
   end
 
-  def opponent_of(the_player)
-    @players.select { |player| player != the_player }.first
+  # def opponent_of(the_player)
+  #   @players.select { |player| player != the_player }.first
+  # end
+  def opponent
+    @players.reject { |player| turn == player }.last
   end
 
   private
-  
+
   attr_reader :players
 
 end

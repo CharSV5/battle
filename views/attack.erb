@@ -1,5 +1,5 @@
-<%= @game.turn.name %> attacked <%= @game.opponent_of(@game.turn).name %><br>
-<%= @game.opponent_of(@game.turn).name %> HP = <%= @game.opponent_of(@game.turn).hit_points %>
+<%= @game.turn.name %> attacked <%= @game.opponent.name %><br>
+<%= @game.opponent.name %> HP = <%= @game.opponent.hit_points %>
 <form action="/switch" method="post">
   <input type="submit" value="OK">
 </form>
