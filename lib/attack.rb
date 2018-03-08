@@ -1,13 +1,14 @@
-class Attach
-  def initialize(player,)
-    player.receive_damage
+class Attack
+
+  def initialize(player)
+    @player = player
   end
 
-  def switch_turn
-    @turn = opponent_of(@turn)
+  def self.run(player)
+    new(player).run
   end
 
-  def opponent_of(the_player)
-    @players.select { |player| player != the_player }.first
+  def run
+    @player.receive_damage
   end
 end

@@ -2,4 +2,6 @@
 <h3><%= @game.player1.name %> HP = <%= @game.player1.hit_points %></h3>
 <h3><%= @game.player2.name %> HP = <%= @game.player2.hit_points %></h3>
 <h3><%= @game.turn.name %>'s turn</h3>
-<a href="/attack">Attack</a>
+<form action="/attack" method="post">
+  <input type="submit" value="Attack">
+</form>
