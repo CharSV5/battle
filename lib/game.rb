@@ -17,7 +17,6 @@ class Game
     player.receive_damage
   end
 
-
   def switch_turn
     @turn = opponent_of(@turn)
   end
@@ -25,4 +24,9 @@ class Game
   def opponent_of(the_player)
     @players.select { |player| player != the_player }.first
   end
+
+  private
+  
+  attr_reader :players
+
 end

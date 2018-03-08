@@ -4,4 +4,11 @@ feature 'players can attack' do
     click_link 'Attack'
     expect(page).to have_content 'Charlene attacked Cindy'
   end
+  scenario 'player 2 can attack back' do
+    sign_in_and_play
+    click_link 'Attack'
+    click_button 'OK'
+    click_link 'Attack'
+    expect(page).to have_content 'Cindy attacked Charlene'
+  end
 end
