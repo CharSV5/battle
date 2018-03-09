@@ -11,4 +11,10 @@ class Attack
   def run
     @player.receive_damage
   end
+
+  private
+
+  # def damage
+  #   rand(5..20)
+  # end
 end

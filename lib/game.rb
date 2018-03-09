@@ -5,6 +5,14 @@ class Game
     @turn = player1
   end
 
+  def self.create(player1,player2)
+    @game = Game.new(player1, player2)
+  end
+
+  def self.instance
+    @game
+  end
+  
   def player1
     @players.first
   end
@@ -36,7 +44,7 @@ class Game
   private
 
   attr_reader :players
-  
+
   def losing_players
     players.select { |player| player.hit_points <= 0 }
   end
